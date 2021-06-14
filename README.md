@@ -1,55 +1,62 @@
+
+
 # mcdonaldpos
+
+## [서상철](https://github.com/Leviadna)
+## [조성일](https://github.com/sung3441)
+## [오상화](https://github.com/sean-oh-7)
+## [](https://github.com/leejihyeon1)
 
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121894979-b73e5b80-cd5a-11eb-9901-c397f8d879f0.PNG">
 <br>
 <br>
 <br>
-#개요<br>
+# 개요<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121895969-c70a6f80-cd5b-11eb-88d7-46d27da23154.PNG">
 <br>
 <br>
 <br>
-#초기 구상 목표<br>
+# 초기 구상 목표<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896144-ef926980-cd5b-11eb-81ba-ad797895a3e8.PNG">
 <br>
 <br>
 <br>
-#Library<br>
+# Library<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896256-105abf00-cd5c-11eb-9949-66ee06910148.PNG">
 <br>
 <br>
 <br>
-#디렉터리 구조<br>
+# 디렉터리 구조<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896330-22d4f880-cd5c-11eb-9861-84416771d252.PNG">
 <br>
 <br>
 <br>
-#DB 구조<br>
+# DB 구조<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896832-b3abd400-cd5c-11eb-89d8-cd92aee68acf.PNG">
 <br>
 <br>
 <br>
-#소켓을 이용한 통신<br>
+# 소켓을 이용한 통신<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896981-dd64fb00-cd5c-11eb-825b-c613af3dba8b.PNG">
 <br>
 <br>
 <br>
-#회원가입<br>
+# 회원가입<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897130-01c0d780-cd5d-11eb-8450-e8c9669a597e.PNG">
 <br>
 <br>
 <br>
-#아이디 유효성 검사<br>
+# 아이디 유효성 검사<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897506-6a0fb900-cd5d-11eb-8af4-abe132541bb7.PNG">
 <br>
 <br>
 <br>
-#비밀번호 유효성 검사<br>
+# 비밀번호 유효성 검사<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897599-827fd380-cd5d-11eb-9bb9-65dd87fd9e1d.PNG">
 <br>
 <br>
 <br>
-#이메일 인증 확인<br>
+# 이메일 인증 확인<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897727-a3e0bf80-cd5d-11eb-81b5-767a1a842301.PNG">
 <br>
 '''java 
@@ -99,7 +106,7 @@
 <br>
 <br>
 <br>
-#로그인<br>
+# 로그인<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121898082-f9b56780-cd5d-11eb-82e7-f8b8cbe92248.PNG">
 <br>
 ''' java
@@ -138,7 +145,7 @@
 <br>
 <br>
 <br>
-#상품 목록<br>
+# 상품 목록<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121898887-d63eec80-cd5e-11eb-8313-be8775f99299.PNG">
 <br>
 ''' java 주문 정보 보내기 
@@ -193,7 +200,7 @@
 <br>
 <br>
 <br>
-#채팅<br>
+# 채팅<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121900091-ffac4800-cd5f-11eb-916f-6c2b5e674591.PNG">
 <br>
 '''java 채팅 보낼 때
@@ -233,7 +240,7 @@
 <br>
 <br>
 <br>
-#고객 on/off 시
+# 고객 on/off 시
 <br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121900805-ca542a00-cd60-11eb-88d9-863175184a02.PNG">
 <br>
@@ -260,8 +267,8 @@
 <br>
 <br>
 <br>
-
-#배차 요청하기<br>
+ 
+# 배차 요청하기<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121901187-23bc5900-cd61-11eb-8621-d72b6837cbdc.PNG">
 <br>
 '''java 배차 상태 업로드(Store)
@@ -319,7 +326,7 @@
 <br>
 <br>
 
-#라이더 배정<br>
+# 라이더 배정<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121901942-d5f42080-cd61-11eb-9cd1-76e6f81696c0.PNG">
 <br>
 '''java 라이더 배정하기
@@ -345,7 +352,7 @@
 <br>
 <br>
 
-#라이더 조회<br>
+# 라이더 조회<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121903307-215afe80-cd63-11eb-923d-130d6ef08f09.PNG">
 <br>
 '''java 라이더 조회
@@ -446,7 +453,7 @@
 <br>
 <br>
 
-#배달 완료<br>
+# 배달 완료<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121903934-bcec6f00-cd63-11eb-8323-ff6d9d682f17.PNG">
 <br>
 '''java 주문 완료 처리(Rider)
@@ -501,7 +508,7 @@
 <br>
 <br>
 
-#영수증 생성<br>
+# 영수증 생성<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121904525-3a17e400-cd64-11eb-9834-f903c506b60b.PNG">
 <br>
 ''' java 배달 완료 시 영수증 생성
@@ -566,7 +573,7 @@
 <br>
 <br>
 
-#리뷰 작성<br>
+# 리뷰 작성<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121904810-7cd9bc00-cd64-11eb-8ae4-e64ad54a7b75.PNG">
 <br>
 '''java 리뷰 등록
