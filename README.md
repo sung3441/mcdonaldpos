@@ -4,52 +4,52 @@
 <br>
 <br>
 <br>
-#개요
+#개요<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121895969-c70a6f80-cd5b-11eb-88d7-46d27da23154.PNG">
 <br>
 <br>
 <br>
-#초기 구상 목표
+#초기 구상 목표<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896144-ef926980-cd5b-11eb-81ba-ad797895a3e8.PNG">
 <br>
 <br>
 <br>
-#Library
+#Library<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896256-105abf00-cd5c-11eb-9949-66ee06910148.PNG">
 <br>
 <br>
 <br>
-#디렉터리 구조
+#디렉터리 구조<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896330-22d4f880-cd5c-11eb-9861-84416771d252.PNG">
 <br>
 <br>
 <br>
-#DB 구조
+#DB 구조<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896832-b3abd400-cd5c-11eb-89d8-cd92aee68acf.PNG">
 <br>
 <br>
 <br>
-#소켓을 이용한 통신
+#소켓을 이용한 통신<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896981-dd64fb00-cd5c-11eb-825b-c613af3dba8b.PNG">
 <br>
 <br>
 <br>
-#회원가입
+#회원가입<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897130-01c0d780-cd5d-11eb-8450-e8c9669a597e.PNG">
 <br>
 <br>
 <br>
-#아이디 유효성 검사
+#아이디 유효성 검사<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897506-6a0fb900-cd5d-11eb-8af4-abe132541bb7.PNG">
 <br>
 <br>
 <br>
-#비밀번호 유효성 검사
+#비밀번호 유효성 검사<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897599-827fd380-cd5d-11eb-9bb9-65dd87fd9e1d.PNG">
 <br>
 <br>
 <br>
-#이메일 인증 확인
+#이메일 인증 확인<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897727-a3e0bf80-cd5d-11eb-81b5-767a1a842301.PNG">
 '''java 
 
@@ -98,7 +98,7 @@
 <br>
 <br>
 <br>
-#로그인
+#로그인<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121898082-f9b56780-cd5d-11eb-82e7-f8b8cbe92248.PNG">
 ''' java
 
@@ -189,6 +189,152 @@
 <br>
 <br>
 <br>
+#채팅<br>
+<img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121900091-ffac4800-cd5f-11eb-916f-6c2b5e674591.PNG">
+'''java 채팅 보낼 때
+
+	//메시지를 매개변수로 받고 json화 시킨 데이터를 반환해줌
+	//채팅용  //나중에 매개변수로 member도 받아서 처리하기
+	public static String getMsgJson(String msg, Member member) {
+		StringBuffer sb = new StringBuffer();
+		sb.append("{");
+		sb.append("\"cmd\" : \"chat\",");
+		sb.append("\"msg\" : \""+msg+"\",");
+		sb.append("\"member_id\":\""+member.getMember_id()+"\"");
+		sb.append("}");
+		return sb.toString();
+	}
+'''
+<br>
+'''java 채팅 수신(Store)
+	
+	else if(cmd.equals("chat")) {
+		String msg = (String) obj.get("msg");
+		int member_id = Integer.parseInt((String)obj.get("member_id"));
+		if(Integer.parseInt((String)obj.get("member_id")) == mainClient.main.getMember_id()) { //내가 선택한 테이블 로우가 전송 받은 멤버 아이디와 같다면..
+			mainClient.main.getChatTextArea().append(msg+"\n");
+		}
+	}
+'''
+<br>
+'''java 채팅 수신(Customer)
+	
+	if(cmd.equals("chat")) {
+		if( Integer.parseInt((String)json.get("member_id")) == productMain.getMember().getMember_id()) {
+			String msg = (String)json.get("msg");
+			productMain.getChatArea().append(msg+"\n");					
+		}
+'''
+<br>
+<br>
+<br>
+#고객 on/off 시
+<img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121900805-ca542a00-cd60-11eb-88d9-863175184a02.PNG">
+'''java
+	
+	//멤버의 로그인 상태를 바꿔줄 메서드
+	public void logOnOff(String onoff) {
+		String sql  = "update member set onoff='"+onoff+"' where member_id="+member.getMember_id();
+		PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = getAppMain().getCon().prepareStatement(sql);
+			int result = pstmt.executeUpdate();
+			if(result < 1) {
+				System.out.println("고객 "+onoff+"으로 상태 변경 실패");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			getAppMain().release(pstmt);
+		}
+	}
+'''
+<br>
+<br>
+<br>
+
+#배차 요청하기
+<img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121901187-23bc5900-cd61-11eb-8621-d72b6837cbdc.PNG">
+'''java 배차 상태 업로드(Store)
+	
+	//배차 중으로 정보 업데이트
+	public void infoUpdate() {
+		int ord_id=(int)table.getValueAt(table.getSelectedRow(), 0);
+		
+		PreparedStatement pstmt=null;
+		String sql="update ord set info='배차 중' where ord_id="+ord_id;
+		
+		try {
+			pstmt=con.prepareStatement(sql);
+			int result=pstmt.executeUpdate();
+			if(result<1) {
+				System.out.println("배차중 업데이트 실패");
+			}else {
+				ordModel.ordList();		
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+'''
+<br>
+''' java 변경된 상태 전송(Store)
+
+	/라이더 페이지에 배차를 요청!
+	public void sendState() {
+		StringBuffer sb=new StringBuffer();
+		Object ord_id = table.getValueAt(table.getSelectedRow(), 0) ;
+		sb.append("{");
+		sb.append("\"cmd\" : \"state\",");
+		sb.append("\"state\" : \"배차 중\"");
+		sb.append("\"ord_id\" : \""+ord_id+"\"");
+		sb.append("}");
+		mainThread.send(sb.toString());
+	}
+'''
+<br>
+''' java 변경된 상태 수신(Rider)
+
+	String cmd = (String)json.get("cmd");
+		if(cmd.equals("state")) {
+			String state = (String)json.get("state");
+			if(state.equals("배차 중")) {
+				JOptionPane.showMessageDialog(riderMain, "새 주문이 들어왔습니다. 배차를 진행해주세요.");
+				riderMain.getRiderOrder().getOrderList();
+			}
+		}
+
+'''
+<br>
+<br>
+<br>
+
+#라이더 배정
+<img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121901942-d5f42080-cd61-11eb-9cd1-76e6f81696c0.PNG">
+'''java 
+
+'''
+<br>
+<br>
+<br>
+
+<img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896981-dd64fb00-cd5c-11eb-825b-c613af3dba8b.PNG">
+<br>
+<br>
+<br>
+
+<img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896981-dd64fb00-cd5c-11eb-825b-c613af3dba8b.PNG">
+<br>
+<br>
+<br>
+
+<img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896981-dd64fb00-cd5c-11eb-825b-c613af3dba8b.PNG">
+<br>
+<br>
+<br>
+
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896981-dd64fb00-cd5c-11eb-825b-c613af3dba8b.PNG">
 <br>
 <br>
