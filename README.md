@@ -21,13 +21,13 @@
 <br>
 
 # 초기 구상 목표
-
 <br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896144-ef926980-cd5b-11eb-81ba-ad797895a3e8.PNG">
 <br>
 <br>
 <br>
-# Library<br>
+# Library
+<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896256-105abf00-cd5c-11eb-9949-66ee06910148.PNG">
 <br>
 <br>
