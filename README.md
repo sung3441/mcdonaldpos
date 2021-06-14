@@ -2,10 +2,10 @@
 
 # mcdonaldpos
 
-## [서상철](https://github.com/Leviadna)
-## [조성일](https://github.com/sung3441)
-## [오상화](https://github.com/sean-oh-7)
-## [](https://github.com/leejihyeon1)
+#### [서상철 github.com/Leviadna](https://github.com/Leviadna)
+#### [조성일 github.com/sung3441](https://github.com/sung3441)
+#### [오상화 github.com/sean-oh-7](https://github.com/sean-oh-7)
+#### [이지현 github.com/leejihyeon1](https://github.com/leejihyeon1)
 
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121894979-b73e5b80-cd5a-11eb-9901-c397f8d879f0.PNG">
 <br>
