@@ -53,7 +53,6 @@
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121897727-a3e0bf80-cd5d-11eb-81b5-767a1a842301.PNG">
 '''이메일 전송 java
 import java.util.Properties;
-
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -62,7 +61,6 @@ import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
 public class MailManager {
 	public static void sendMail(String receiver, String title, String content) {
 		Properties props = new Properties(); //Map 유형 중 하나
@@ -71,13 +69,11 @@ public class MailManager {
 		props.put("mail.smtp.auth", "true"); //권한 트루
 		props.put("mail.smtp.ssl.enable", "true");
 		props.put("mail.smtp.ssl.trust", "smtp.gmail.com"); //ssl 사용시	
-	
 		Session session = Session.getDefaultInstance(props, new Authenticator() {
 			protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
 				return new javax.mail.PasswordAuthentication("전송 이메일", "앱 비밀번호");
 			}
-		});
-		
+		});		
 		MimeMessage message = new MimeMessage(session);
 		try {
 			message.setFrom(new InternetAddress("전송자 메일 주소"));
