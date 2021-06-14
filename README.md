@@ -11,12 +11,18 @@
 <br>
 <br>
 <br>
-# 개요<br>
+
+# 개요
+
+<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121895969-c70a6f80-cd5b-11eb-88d7-46d27da23154.PNG">
 <br>
 <br>
 <br>
-# 초기 구상 목표<br>
+
+# 초기 구상 목표
+
+<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121896144-ef926980-cd5b-11eb-81ba-ad797895a3e8.PNG">
 <br>
 <br>
