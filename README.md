@@ -345,8 +345,9 @@
 <br>
 <br>
 
-#라이더 조회
+#라이더 조회<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121903307-215afe80-cd63-11eb-923d-130d6ef08f09.PNG">
+<br>
 '''java 라이더 조회
 	//라이더 조회하기
 	public RiderSearch(RiderMain riderMain) {
@@ -445,8 +446,9 @@
 <br>
 <br>
 
-#배달 완료
+#배달 완료<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121903934-bcec6f00-cd63-11eb-8323-ff6d9d682f17.PNG">
+<br>
 '''java 주문 완료 처리(Rider)
 	
 	//주문 완료 처리하기
@@ -499,8 +501,9 @@
 <br>
 <br>
 
-#영수증 생성
+#영수증 생성<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121904525-3a17e400-cd64-11eb-9834-f903c506b60b.PNG">
+<br>
 ''' java 배달 완료 시 영수증 생성
 
 	//배달 완료 시 영수증 추가하기
@@ -563,8 +566,9 @@
 <br>
 <br>
 
-#리뷰 작성
+#리뷰 작성<br>
 <img width = "500" alt = "슬라이드1" src = "https://user-images.githubusercontent.com/67699933/121904810-7cd9bc00-cd64-11eb-8ae4-e64ad54a7b75.PNG">
+<br>
 '''java 리뷰 등록
 
 	//게시물 등록
